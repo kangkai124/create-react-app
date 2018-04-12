@@ -105,7 +105,7 @@ module.exports = {
     // https://github.com/facebook/create-react-app/issues/290
     // `web` extension prefixes have been added for better support
     // for React Native Web.
-    extensions: ['.web.js', '.mjs', '.js', '.json', '.web.jsx', '.jsx'],
+    extensions: ['.js', '.json', '.jsx'],
     alias: {
       // @remove-on-eject-begin
       // Resolve Babel runtime relative to react-scripts.
@@ -146,6 +146,7 @@ module.exports = {
               formatter: eslintFormatter,
               eslintPath: require.resolve('eslint'),
               baseConfig: {
+                // TODO: change to eslint-config-kk
                 extends: [require.resolve('eslint-config-react-app')],
               },
               // @remove-on-eject-begin
@@ -203,6 +204,8 @@ module.exports = {
                         },
                       },
                     ],
+                    // Added by Kk
+                    require.resolve('react-hot-loader/babel'),
                   ],
                   // This is a feature of `babel-loader` for webpack (not Babel itself).
                   // It enables caching results in ./node_modules/.cache/babel-loader/

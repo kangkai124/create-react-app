@@ -260,7 +260,7 @@ inquirer
         stdio: 'inherit',
       });
     }
-    console.log(green('Ejected successfully!'));
+    console.log(green('Biu Biu Biu!Ejected successfully!'));
     console.log();
 
     console.log(
